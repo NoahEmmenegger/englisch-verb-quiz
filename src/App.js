@@ -17,7 +17,6 @@ export default function App() {
                 <Button
                     className="bg-primary"
                     onClick={() => {
-                        setIsChecking(false);
                         setCurrentRandomVerbs(generateRandomVerbs());
                     }}
                 >
@@ -41,8 +40,8 @@ export default function App() {
                         ))}
                     </tbody>
                 </Table>
-                <Button className="bg-success" onClick={() => setIsChecking(true)}>
-                    Check answers
+                <Button className="bg-secondary" onClick={() => setIsChecking(!isChecking)}>
+                    {isChecking ? 'Hide' : 'Check'} Answers
                 </Button>
                 <small>Double click in field for solution</small>
             </div>
