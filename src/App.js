@@ -27,11 +27,21 @@ export default function App() {
                 <Table striped bordered hover variant="light">
                     <thead>
                         <tr>
-                            <th>German</th>
-                            <th>English - 3rd Person</th>
-                            <th>Simple Past/Preterit</th>
-                            <th>Past Perfect</th>
-                            <th>Progressive/Continuous</th>
+                            <th>
+                                <p>German</p>
+                            </th>
+                            <th>
+                                <p>English - 3rd Person</p>
+                            </th>
+                            <th>
+                                <p>Simple Past/Preterit</p>
+                            </th>
+                            <th>
+                                <p>Past Perfect</p>
+                            </th>
+                            <th>
+                                <p>Progressive/Continuous</p>
+                            </th>
                         </tr>
                     </thead>
                     <tbody className="tw-w-52">

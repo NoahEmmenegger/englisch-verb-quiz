@@ -10,19 +10,31 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-table th {
-    writing-mode: vertical-rl;
-}
-
 @media screen and (max-width: 600px) {
-    table th {
-        writing-mode: vertical-rl;
-        vertical-align: top;
-        transform: rotate(7deg);
+    table {
+        text-align: center;
+        table-layout: fixed;
+        width: 650px;
+    }
+    table th p {
+        margin: 0 -100%;
+        text-align: center;
+        white-space: nowrap;
+        transform-origin: 50% 50%;
+        transform: rotate(90deg);
         -ms-transform: rotate(90deg); /* IE 9 */
         -moz-transform: rotate(90deg); /* Firefox */
         -webkit-transform: rotate(90deg); /* Safari and Chrome */
         -o-transform: rotate(90deg); /* Opera */
+    }
+
+    table th p:before {
+        content: '';
+        width: 0;
+
+        padding-top: 110%; /* takes width as reference, + 10% for faking some extra padding */
+        display: inline-block;
+        vertical-align: middle;
     }
 
     table tr .tw-flex {
