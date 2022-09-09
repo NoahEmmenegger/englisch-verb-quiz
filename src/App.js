@@ -1,5 +1,6 @@
 import { Button, Table } from 'react-bootstrap';
 import './App.css';
+import Verb from './components/Verb';
 
 function App() {
     return (
@@ -22,18 +23,9 @@ function App() {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>to be</td>
-                            <td>am</td>
-                            <td>was</td>
-                            <td>been</td>
-                        </tr>
-                        <tr>
-                            <td>to become</td>
-                            <td>become</td>
-                            <td>became</td>
-                            <td>become</td>
-                        </tr>
+                        <Verb />
+                        <Verb />
+                        <Verb />
                     </tbody>
                 </Table>
             </div>
