@@ -1,11 +1,11 @@
+import { useState } from 'react';
 import { Button, Table } from 'react-bootstrap';
 import './App.css';
 import Verb from './components/Verb';
 import { verbs } from './verbs';
 
-function App() {
-    const currentRandomVerbs = verbs.sort(() => Math.random() - 0.5).slice(0, 5);
-    console.log(currentRandomVerbs);
+export default function App() {
+    const [currentRandomVerbs, setCurrentRandomVerbs] = useState(generateRandomVerbs());
     return (
         <div className="">
             <div className="tw-flex tw-justify-between tw-m-4">
@@ -13,16 +13,19 @@ function App() {
                     <h1 className="tw-text-xl">Mixed Verb Forms Quiz</h1>
                     <small className="tw-text-gray-300">by Noah Emmenegger</small>
                 </div>
-                <Button className="bg-primary">Generate new quiz</Button>
+                <Button className="bg-primary" onClick={() => setCurrentRandomVerbs(generateRandomVerbs())}>
+                    Generate new quiz
+                </Button>
             </div>
             <div className="tw-p-5">
                 <Table striped bordered hover variant="light">
                     <thead>
                         <tr>
-                            <th>Infinitive</th>
-                            <th>Present</th>
-                            <th>Past</th>
-                            <th>Participle</th>
+                            <th>German</th>
+                            <th>English - 3rd Person</th>
+                            <th>Simple Past/Preterit</th>
+                            <th>Past Perfect</th>
+                            <th>Progressive/Continuous</th>
                         </tr>
                     </thead>
                     <tbody className="tw-w-52">
@@ -37,4 +40,6 @@ function App() {
     );
 }
 
-export default App;
+const generateRandomVerbs = () => {
+    return verbs.sort(() => Math.random() - 0.5).slice(0, 5);
+};
