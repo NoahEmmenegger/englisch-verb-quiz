@@ -12,6 +12,7 @@ code {
 
 table th {
     writing-mode: vertical-rl;
+    color: red;
 }
 
 @media screen and (max-width: 600px) {
