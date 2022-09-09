@@ -31,6 +31,7 @@ function App() {
                         ))}
                     </tbody>
                 </Table>
+                <Button className="bg-success">Check answers</Button>
             </div>
         </div>
     );
