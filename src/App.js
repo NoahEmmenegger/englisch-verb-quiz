@@ -40,10 +40,12 @@ export default function App() {
                         ))}
                     </tbody>
                 </Table>
-                <Button className="bg-secondary" onClick={() => setIsChecking(!isChecking)}>
-                    {isChecking ? 'Hide' : 'Check'} Answers
-                </Button>
-                <small>Double click in field for solution</small>
+                <div className="tw-flex">
+                    <Button className="bg-secondary" onClick={() => setIsChecking(!isChecking)}>
+                        {isChecking ? 'Hide' : 'Check'} Answers
+                    </Button>
+                    <small className="tw-ml-auto">Double click in field for solution</small>
+                </div>
             </div>
         </div>
     );

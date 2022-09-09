@@ -5,7 +5,7 @@ export default function VerbInput({ string, isShown, isChecking, before }) {
     return (
         <td>
             <div className="tw-flex">
-                <small className="tw-mr-1">{before}</small>
+                <small className="tw-mr-1">{before || 'ㅤ'}</small>
                 <input
                     disabled={isShown}
                     className={`tw-w-full  tw-border-2 tw-rounded-md ${
