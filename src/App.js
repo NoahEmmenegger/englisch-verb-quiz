@@ -25,7 +25,7 @@ function App() {
                             <th>Participle</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="tw-w-52">
                         {currentRandomVerbs.map((verb) => (
                             <Verb key={verb.infinitive} verb={verb} />
                         ))}
