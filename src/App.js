@@ -1,8 +1,11 @@
 import { Button, Table } from 'react-bootstrap';
 import './App.css';
 import Verb from './components/Verb';
+import { verbs } from './verbs';
 
 function App() {
+    const currentRandomVerbs = verbs.sort(() => Math.random() - 0.5).slice(0, 5);
+    console.log(currentRandomVerbs);
     return (
         <div className="">
             <div className="tw-flex tw-justify-between tw-m-4">
@@ -23,9 +26,9 @@ function App() {
                         </tr>
                     </thead>
                     <tbody>
-                        <Verb />
-                        <Verb />
-                        <Verb />
+                        {currentRandomVerbs.map((verb) => (
+                            <Verb key={verb.infinitive} verb={verb} />
+                        ))}
                     </tbody>
                 </Table>
             </div>

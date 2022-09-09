@@ -1,0 +1,98 @@
+export const verbs = [
+    {
+        infinitive: 'to be',
+        present: 'am',
+        past: 'was',
+        participle: 'been',
+    },
+    {
+        infinitive: 'to have',
+        present: 'have',
+        past: 'had',
+        participle: 'had',
+    },
+    {
+        infinitive: 'to do',
+        present: 'do',
+        past: 'did',
+        participle: 'done',
+    },
+    {
+        infinitive: 'to say',
+        present: 'say',
+        past: 'said',
+        participle: 'said',
+    },
+    {
+        infinitive: 'to go',
+        present: 'go',
+        past: 'went',
+        participle: 'gone',
+    },
+    {
+        infinitive: 'to get',
+        present: 'get',
+        past: 'got',
+        participle: 'got',
+    },
+    {
+        infinitive: 'to make',
+        present: 'make',
+        past: 'made',
+        participle: 'made',
+    },
+    {
+        infinitive: 'to know',
+        present: 'know',
+        past: 'knew',
+        participle: 'known',
+    },
+    {
+        infinitive: 'to think',
+        present: 'think',
+        past: 'thought',
+        participle: 'thought',
+    },
+    {
+        infinitive: 'to take',
+        present: 'take',
+        past: 'took',
+        participle: 'taken',
+    },
+    {
+        infinitive: 'to see',
+        present: 'see',
+        past: 'saw',
+        participle: 'seen',
+    },
+    {
+        infinitive: 'to come',
+        present: 'come',
+        past: 'came',
+        participle: 'come',
+    },
+    {
+        infinitive: 'to want',
+        present: 'want',
+        past: 'wanted',
+        participle: 'wanted',
+    },
+    {
+        infinitive: 'to look',
+        present: 'look',
+        past: 'looked',
+        participle: 'looked',
+    },
+    {
+        infinitive: 'to use',
+        present: 'use',
+        past: 'used',
+        participle: 'used',
+    },
+    {
+        infinitive: 'to find',
+        present: 'find',
+        past: 'found',
+        participle: 'found',
+    },
+];
