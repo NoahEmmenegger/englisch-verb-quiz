@@ -6,6 +6,7 @@ import { verbs } from './verbs';
 
 export default function App() {
     const [currentRandomVerbs, setCurrentRandomVerbs] = useState(generateRandomVerbs());
+    const [isChecking, setIsChecking] = useState(false);
     return (
         <div className="">
             <div className="tw-flex tw-justify-between tw-m-4">
@@ -13,7 +14,13 @@ export default function App() {
                     <h1 className="tw-text-xl">Mixed Verb Forms Quiz</h1>
                     <small className="tw-text-gray-300">by Noah Emmenegger</small>
                 </div>
-                <Button className="bg-primary" onClick={() => setCurrentRandomVerbs(generateRandomVerbs())}>
+                <Button
+                    className="bg-primary"
+                    onClick={() => {
+                        setIsChecking(false);
+                        setCurrentRandomVerbs(generateRandomVerbs());
+                    }}
+                >
                     Generate new quiz
                 </Button>
             </div>
@@ -30,11 +37,13 @@ export default function App() {
                     </thead>
                     <tbody className="tw-w-52">
                         {currentRandomVerbs.map((verb) => (
-                            <Verb key={verb.infinitive} verb={verb} />
+                            <Verb key={verb.infinitive} verb={verb} isChecking={isChecking} />
                         ))}
                     </tbody>
                 </Table>
-                <Button className="bg-success">Check answers</Button>
+                <Button className="bg-success" onClick={() => setIsChecking(true)}>
+                    Check answers
+                </Button>
             </div>
         </div>
     );
