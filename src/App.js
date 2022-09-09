@@ -44,6 +44,7 @@ export default function App() {
                 <Button className="bg-success" onClick={() => setIsChecking(true)}>
                     Check answers
                 </Button>
+                <small>Double click in field for solution</small>
             </div>
         </div>
     );
