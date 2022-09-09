@@ -9,6 +9,11 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+table th {
+    writing-mode: vertical-rl;
+}
+
 @media screen and (max-width: 600px) {
     table th {
         writing-mode: vertical-rl;
