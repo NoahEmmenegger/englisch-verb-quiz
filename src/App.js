@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button, Table } from 'react-bootstrap';
 import './App.css';
 import Verb from './components/Verb';
-import { verbs } from './verbs';
+import { verbs } from './file2';
 
 export default function App() {
     const [currentRandomVerbs, setCurrentRandomVerbs] = useState(generateRandomVerbs());
